@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 85vw;
+  padding: 30px;
+  height: 10vh;
+  align-items: center;
+  border: 1px solid #f0f0f0;
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+}

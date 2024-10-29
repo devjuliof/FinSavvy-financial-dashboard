@@ -1,0 +1,16 @@
+.card {
+  width: 20%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  height: 180px;
+}
+
+.card header {
+  display: flex;
+  gap: 10px;
+}
+
+.card h2 {
+  color: #b6b7ba;
+}

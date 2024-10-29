@@ -1,0 +1,19 @@
+.card {
+  width: 20%;
+  height: 180px;
+  color: white;
+  background-color: #0e3145;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.card header {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}

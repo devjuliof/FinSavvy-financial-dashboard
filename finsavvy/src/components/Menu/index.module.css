@@ -1,0 +1,55 @@
+.menu {
+  background-color: white;
+  width: 15vw;
+  height: 100vh;
+  border: 1px solid #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.nav {
+  margin-left: 15px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.nav button {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  height: 50px;
+  width: 90%;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #9d9ea2;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.nav button.active {
+  background-color: #0e3145;
+  color: white;
+}
+
+.nav button:not(.active):hover {
+  background-color: #8beeee;
+  color: white;
+}
