@@ -1,39 +1,55 @@
+import { useEffect, useState } from "react";
 import EarningsCard from "../EarningsCard";
 import SavingsCard from "../SavingsCard";
 import SpendingsCard from "../SpendingsCard";
 import TotalBalanceCard from "../TotalBalanceCard";
 import styles from "./index.module.css";
-import { useFinanceData } from "../../contexts/FinanceDataContext";
+import EarningsExpensesChart from "../EarningsExpensesChart";
+
+interface UserAccountData {
+  totalBalance: number;
+  earnings: number;
+  spendings: number;
+  savings: number;
+}
+
+interface UserData {
+  month: string;
+  userAccountData: UserAccountData;
+}
 
 export default function Overview() {
-  const { userData, addTransaction } = useFinanceData();
-  const { totalBalance, earnings, spendings, savings } =
-    userData[0].userAccountData;
+  const [userData, setUserData] = useState<UserData[]>([]);
+  const [userAccountData, setUserAccountData] =
+    useState<UserAccountData | null>(null);
 
-  console.log(userData[0]);
-
-  const handleAddTransaction = () => {
-    const newTransaction = {
-      name: "Saldo atual",
-      date: "25 Oct 2024",
-      hour: "16:00",
-      amount: 200,
-      type: "income" as const,
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("/mock.json");
+      const data = await response.json();
+      setUserData(data.userData);
+      setUserAccountData(data.userData[0].userAccountData);
     };
-    addTransaction(newTransaction, "oct"); // Supondo que o mês é 'jan'
-  };
 
-  console.log(userData[0]);
+    fetchData();
+  }, []);
+
+  if (!userAccountData) {
+    return <div>Loading...</div>;
+  }
+
+  const { totalBalance, earnings, spendings, savings } = userAccountData;
 
   return (
     <section className={styles.section}>
-      <h1 onClick={() => handleAddTransaction()}>Overview</h1>
+      <h1>Overview</h1>
       <div className={styles.cards}>
         <TotalBalanceCard balance={totalBalance} />
         <EarningsCard earnings={earnings} />
         <SpendingsCard spendings={spendings} />
         <SavingsCard savings={savings} />
       </div>
+      <EarningsExpensesChart userData={userData} />
     </section>
   );
 }

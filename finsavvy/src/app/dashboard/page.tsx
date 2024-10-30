@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Menu from "@/components/Menu";
 import Overview from "@/components/Overview";
 import MySavings from "@/components/MySavings";
-import { FinanceDataProvider } from "../../contexts/FinanceDataContext";
 
 type Page = "overview" | "mySavings";
 
@@ -25,20 +24,18 @@ export default function Dashboard() {
 
   return (
     <>
-      <FinanceDataProvider>
-        <div style={{ display: "flex" }}>
-          <Menu currentPage={currentPage} setCurrentPage={setCurrentPage} />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Header />
-            {renderPage()}
-          </div>
+      <div style={{ display: "flex" }}>
+        <Menu currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Header />
+          {renderPage()}
         </div>
-      </FinanceDataProvider>
+      </div>
     </>
   );
 }
