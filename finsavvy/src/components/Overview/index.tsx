@@ -49,7 +49,9 @@ export default function Overview() {
         <SpendingsCard spendings={spendings} />
         <SavingsCard savings={savings} />
       </div>
-      <EarningsExpensesChart userData={userData} />
+      <div className={styles.chart}>
+        <EarningsExpensesChart userData={userData} />
+      </div>
     </section>
   );
 }

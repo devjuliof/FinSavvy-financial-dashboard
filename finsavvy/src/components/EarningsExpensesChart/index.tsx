@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -8,6 +8,7 @@ import {
   BarElement,
   CategoryScale,
   LinearScale,
+  Chart,
 } from "chart.js";
 
 ChartJS.register(
@@ -32,6 +33,8 @@ interface MonthlyChartProps {
 }
 
 const MonthlyChart: React.FC<MonthlyChartProps> = ({ userData }) => {
+  const chartRef = useRef<Chart<"bar", number[]> | null>(null);
+
   const labels = userData.map((data) => data.month);
   const earnings = userData.map((data) => data.userAccountData.earnings);
   const spendings = userData.map((data) => data.userAccountData.spendings);
@@ -60,6 +63,7 @@ const MonthlyChart: React.FC<MonthlyChartProps> = ({ userData }) => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: "top" as const,
@@ -98,21 +102,24 @@ const MonthlyChart: React.FC<MonthlyChartProps> = ({ userData }) => {
     },
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (chartRef.current) {
+        chartRef.current.resize();
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div
-      style={{
-        marginTop: "35px",
-        backgroundColor: "white",
-        borderRadius: "15px",
-        boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
-        padding: "20px",
-        maxWidth: "900px",
-        height: "520px",
-      }}
-    >
+    <>
       <h2 style={{ color: "#0e3145" }}>Statistics</h2>
-      <Bar data={data} options={options} />
-    </div>
+      <div style={{ position: "relative", width: "100%", height: "350px" }}>
+        <Bar ref={chartRef} data={data} options={options} />
+      </div>
+    </>
   );
 };
 

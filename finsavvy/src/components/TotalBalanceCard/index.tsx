@@ -13,7 +13,6 @@ interface TotalBalanceCardProps {
 export default function TotalBalanceCard({ balance }: TotalBalanceCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Funções para abrir e fechar o modal
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
@@ -29,7 +28,6 @@ export default function TotalBalanceCard({ balance }: TotalBalanceCardProps) {
         <SendButton />
       </div>
 
-      {/* Modal para adicionar transação */}
       {isModalOpen && <ModalForm onClose={closeModal} />}
     </article>
   );
