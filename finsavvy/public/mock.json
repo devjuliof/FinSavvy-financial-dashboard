@@ -22,6 +22,27 @@
           "hour": "09:00",
           "amount": 2000.0,
           "type": "income"
+        },
+        {
+          "name": "Utilities",
+          "date": "10 Jan 2024",
+          "hour": "10:00",
+          "amount": 150.0,
+          "type": "expense"
+        },
+        {
+          "name": "Gym Membership",
+          "date": "15 Jan 2024",
+          "hour": "08:00",
+          "amount": 50.0,
+          "type": "expense"
+        },
+        {
+          "name": "Freelance Project",
+          "date": "20 Jan 2024",
+          "hour": "11:00",
+          "amount": 500.0,
+          "type": "income"
         }
       ]
     },
@@ -46,6 +67,27 @@
           "date": "1 Feb 2024",
           "hour": "09:00",
           "amount": 2500.0,
+          "type": "income"
+        },
+        {
+          "name": "Dinner with Friends",
+          "date": "14 Feb 2024",
+          "hour": "19:00",
+          "amount": 80.0,
+          "type": "expense"
+        },
+        {
+          "name": "Gifts",
+          "date": "25 Feb 2024",
+          "hour": "18:00",
+          "amount": 200.0,
+          "type": "expense"
+        },
+        {
+          "name": "Bonus",
+          "date": "28 Feb 2024",
+          "hour": "15:00",
+          "amount": 300.0,
           "type": "income"
         }
       ]
@@ -72,6 +114,20 @@
           "hour": "09:00",
           "amount": 3000.0,
           "type": "income"
+        },
+        {
+          "name": "Internet Bill",
+          "date": "12 Mar 2024",
+          "hour": "09:00",
+          "amount": 60.0,
+          "type": "expense"
+        },
+        {
+          "name": "Books",
+          "date": "20 Mar 2024",
+          "hour": "13:00",
+          "amount": 120.0,
+          "type": "expense"
         }
       ]
     },
@@ -97,6 +153,20 @@
           "hour": "09:00",
           "amount": 2800.0,
           "type": "income"
+        },
+        {
+          "name": "Gas",
+          "date": "18 Apr 2024",
+          "hour": "17:00",
+          "amount": 120.0,
+          "type": "expense"
+        },
+        {
+          "name": "Concert Tickets",
+          "date": "22 Apr 2024",
+          "hour": "20:00",
+          "amount": 150.0,
+          "type": "expense"
         }
       ]
     },
@@ -122,6 +192,20 @@
           "hour": "09:00",
           "amount": 3200.0,
           "type": "income"
+        },
+        {
+          "name": "Movie Night",
+          "date": "5 May 2024",
+          "hour": "21:00",
+          "amount": 30.0,
+          "type": "expense"
+        },
+        {
+          "name": "Online Course",
+          "date": "12 May 2024",
+          "hour": "14:00",
+          "amount": 150.0,
+          "type": "expense"
         }
       ]
     },
@@ -147,6 +231,20 @@
           "hour": "09:00",
           "amount": 3000.0,
           "type": "income"
+        },
+        {
+          "name": "Pet Supplies",
+          "date": "22 Jun 2024",
+          "hour": "15:00",
+          "amount": 80.0,
+          "type": "expense"
+        },
+        {
+          "name": "Insurance",
+          "date": "25 Jun 2024",
+          "hour": "10:00",
+          "amount": 200.0,
+          "type": "expense"
         }
       ]
     },
@@ -172,6 +270,20 @@
           "hour": "09:00",
           "amount": 2900.0,
           "type": "income"
+        },
+        {
+          "name": "Subscriptions",
+          "date": "15 Jul 2024",
+          "hour": "12:00",
+          "amount": 15.0,
+          "type": "expense"
+        },
+        {
+          "name": "Repair Services",
+          "date": "20 Jul 2024",
+          "hour": "11:00",
+          "amount": 200.0,
+          "type": "expense"
         }
       ]
     },
@@ -197,6 +309,20 @@
           "hour": "09:00",
           "amount": 3100.0,
           "type": "income"
+        },
+        {
+          "name": "Lunch",
+          "date": "20 Aug 2024",
+          "hour": "13:00",
+          "amount": 25.0,
+          "type": "expense"
+        },
+        {
+          "name": "Holiday Trip",
+          "date": "25 Aug 2024",
+          "hour": "18:00",
+          "amount": 500.0,
+          "type": "expense"
         }
       ]
     },
@@ -204,24 +330,38 @@
       "month": "sep",
       "userAccountData": {
         "totalBalance": 9500,
-        "earnings": 3400,
-        "spendings": 1100,
+        "earnings": 3300,
+        "spendings": 1500,
         "savings": 1300
       },
       "userTransactions": [
         {
-          "name": "Entertainment",
-          "date": "20 Sep 2024",
-          "hour": "19:00",
-          "amount": 200.0,
+          "name": "Coffee",
+          "date": "5 Sep 2024",
+          "hour": "08:00",
+          "amount": 5.0,
           "type": "expense"
         },
         {
           "name": "Salary",
           "date": "1 Sep 2024",
           "hour": "09:00",
-          "amount": 3400.0,
+          "amount": 3300.0,
           "type": "income"
+        },
+        {
+          "name": "Rent",
+          "date": "5 Sep 2024",
+          "hour": "15:00",
+          "amount": 800.0,
+          "type": "expense"
+        },
+        {
+          "name": "Gym Equipment",
+          "date": "15 Sep 2024",
+          "hour": "10:00",
+          "amount": 250.0,
+          "type": "expense"
         }
       ]
     },
@@ -229,41 +369,55 @@
       "month": "oct",
       "userAccountData": {
         "totalBalance": 10000,
-        "earnings": 3600,
-        "spendings": 1500,
+        "earnings": 3500,
+        "spendings": 1700,
         "savings": 1400
       },
       "userTransactions": [
         {
-          "name": "Car Maintenance",
-          "date": "15 Oct 2024",
-          "hour": "10:00",
-          "amount": 300.0,
+          "name": "Dining Out",
+          "date": "10 Oct 2024",
+          "hour": "20:00",
+          "amount": 60.0,
           "type": "expense"
         },
         {
           "name": "Salary",
           "date": "1 Oct 2024",
           "hour": "09:00",
-          "amount": 3600.0,
+          "amount": 3500.0,
           "type": "income"
+        },
+        {
+          "name": "Books",
+          "date": "15 Oct 2024",
+          "hour": "14:00",
+          "amount": 40.0,
+          "type": "expense"
+        },
+        {
+          "name": "Clothes",
+          "date": "22 Oct 2024",
+          "hour": "11:00",
+          "amount": 150.0,
+          "type": "expense"
         }
       ]
     },
     {
       "month": "nov",
       "userAccountData": {
-        "totalBalance": 10500,
+        "totalBalance": 11000,
         "earnings": 3700,
         "spendings": 1600,
         "savings": 1500
       },
       "userTransactions": [
         {
-          "name": "Gifts",
-          "date": "25 Nov 2024",
-          "hour": "18:00",
-          "amount": 400.0,
+          "name": "Transport",
+          "date": "5 Nov 2024",
+          "hour": "08:00",
+          "amount": 100.0,
           "type": "expense"
         },
         {
@@ -272,23 +426,37 @@
           "hour": "09:00",
           "amount": 3700.0,
           "type": "income"
+        },
+        {
+          "name": "Emergency Fund",
+          "date": "10 Nov 2024",
+          "hour": "16:00",
+          "amount": 200.0,
+          "type": "expense"
+        },
+        {
+          "name": "Gifts",
+          "date": "20 Nov 2024",
+          "hour": "18:00",
+          "amount": 150.0,
+          "type": "expense"
         }
       ]
     },
     {
       "month": "dec",
       "userAccountData": {
-        "totalBalance": 11000,
+        "totalBalance": 12000,
         "earnings": 4000,
-        "spendings": 1700,
+        "spendings": 1800,
         "savings": 1600
       },
       "userTransactions": [
         {
-          "name": "Holiday Expenses",
-          "date": "20 Dec 2024",
-          "hour": "16:00",
-          "amount": 500.0,
+          "name": "Rent",
+          "date": "5 Dec 2024",
+          "hour": "15:00",
+          "amount": 800.0,
           "type": "expense"
         },
         {
@@ -297,6 +465,20 @@
           "hour": "09:00",
           "amount": 4000.0,
           "type": "income"
+        },
+        {
+          "name": "Holiday Shopping",
+          "date": "15 Dec 2024",
+          "hour": "10:00",
+          "amount": 400.0,
+          "type": "expense"
+        },
+        {
+          "name": "Dinner Party",
+          "date": "25 Dec 2024",
+          "hour": "19:00",
+          "amount": 200.0,
+          "type": "expense"
         }
       ]
     }

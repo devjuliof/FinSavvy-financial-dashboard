@@ -1,0 +1,16 @@
+.notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.notification h3 {
+  font-size: 20px;
+}
+
+.notification p {
+  font-size: 12px;
+}

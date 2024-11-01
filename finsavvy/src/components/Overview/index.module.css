@@ -17,10 +17,6 @@
   margin-bottom: 20px;
 }
 
-.section h2 {
-  margin-bottom: 20px;
-}
-
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -40,5 +36,11 @@
 @media screen and (min-width: 1200px) {
   .chart {
     width: 65%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .chartAndRecentActivity {
+    flex-direction: column;
   }
 }

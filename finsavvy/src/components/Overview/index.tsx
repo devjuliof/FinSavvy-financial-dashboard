@@ -5,6 +5,7 @@ import SpendingsCard from "../SpendingsCard";
 import TotalBalanceCard from "../TotalBalanceCard";
 import styles from "./index.module.css";
 import EarningsExpensesChart from "../EarningsExpensesChart";
+import RecentActivity from "../RecentActivity";
 
 interface UserAccountData {
   totalBalance: number;
@@ -49,8 +50,14 @@ export default function Overview() {
         <SpendingsCard spendings={spendings} />
         <SavingsCard savings={savings} />
       </div>
-      <div className={styles.chart}>
-        <EarningsExpensesChart userData={userData} />
+      <div
+        className={styles.chartAndRecentActivity}
+        style={{ display: "flex", gap: "16px" }}
+      >
+        <div className={styles.chart}>
+          <EarningsExpensesChart userData={userData} />
+        </div>
+        <RecentActivity />
       </div>
     </section>
   );

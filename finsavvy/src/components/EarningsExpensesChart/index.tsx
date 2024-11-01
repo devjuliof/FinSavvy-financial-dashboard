@@ -116,7 +116,7 @@ const MonthlyChart: React.FC<MonthlyChartProps> = ({ userData }) => {
   return (
     <>
       <h2 style={{ color: "#0e3145" }}>Statistics</h2>
-      <div style={{ position: "relative", width: "100%", height: "350px" }}>
+      <div style={{ position: "static", width: "100%", height: "350px" }}>
         <Bar ref={chartRef} data={data} options={options} />
       </div>
     </>
