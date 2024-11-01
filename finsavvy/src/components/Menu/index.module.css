@@ -1,6 +1,6 @@
 .menu {
   background-color: white;
-  width: 15vw;
+  width: 20vw;
   height: 100vh;
   border: 1px solid #f0f0f0;
 }
@@ -52,4 +52,10 @@
 .nav button:not(.active):hover {
   background-color: #8beeee;
   color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .menu {
+    display: none;
+  }
 }

@@ -5,6 +5,12 @@
   padding-top: 20px;
 }
 
+@media screen and (max-width: 1000px) {
+  .section {
+    min-height: 125vh;
+  }
+}
+
 .section h1 {
   color: #0e3145;
   margin-bottom: 20px;

@@ -5,11 +5,26 @@ import Header from "@/components/Header";
 import Menu from "@/components/Menu";
 import Overview from "@/components/Overview";
 import MySavings from "@/components/MySavings";
+import { isMobileOrTablet } from "../../../utils/isMobileOrTablet";
+import MenuMobile from "@/components/MenuMobile";
 
 type Page = "overview" | "mySavings";
 
 export default function Dashboard() {
   const [currentPage, setCurrentPage] = React.useState<Page>("overview");
+  const [isMobile, setIsMobile] = React.useState<boolean>(isMobileOrTablet());
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(isMobileOrTablet());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -25,7 +40,14 @@ export default function Dashboard() {
   return (
     <>
       <div style={{ display: "flex" }}>
-        <Menu currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        {isMobile ? (
+          <MenuMobile
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+        ) : (
+          <Menu currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        )}
         <div
           style={{
             display: "flex",

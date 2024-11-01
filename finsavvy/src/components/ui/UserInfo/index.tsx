@@ -6,7 +6,7 @@ export default function UserInfo() {
   return (
     <aside className={styles.userInfo}>
       <Image src={logo} width={48} height={48} alt="User Icon" />
-      <div>
+      <div className={styles.info}>
         <h4>Julio Cesar</h4>
         <p>juliofariadev@gmail.com</p>
       </div>

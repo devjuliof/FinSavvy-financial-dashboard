@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  width: 85vw;
+  width: 80vw;
   padding: 30px;
   height: 10vh;
   align-items: center;
@@ -11,4 +11,16 @@
 .rightContainer {
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    width: 100vw;
+  }
 }
