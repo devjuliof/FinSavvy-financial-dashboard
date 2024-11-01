@@ -5,12 +5,26 @@ import Header from "@/components/Header";
 import Menu from "@/components/Menu";
 import Overview from "@/components/Overview";
 import MySavings from "@/components/MySavings";
-import { FinanceDataProvider } from "../../contexts/FinanceDataContext";
+import { isMobileOrTablet } from "../../../utils/isMobileOrTablet";
+import MenuMobile from "@/components/MenuMobile";
 
 type Page = "overview" | "mySavings";
 
 export default function Dashboard() {
   const [currentPage, setCurrentPage] = React.useState<Page>("overview");
+  const [isMobile, setIsMobile] = React.useState<boolean>(isMobileOrTablet());
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(isMobileOrTablet());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -25,20 +39,25 @@ export default function Dashboard() {
 
   return (
     <>
-      <FinanceDataProvider>
-        <div style={{ display: "flex" }}>
+      <div style={{ display: "flex" }}>
+        {isMobile ? (
+          <MenuMobile
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+        ) : (
           <Menu currentPage={currentPage} setCurrentPage={setCurrentPage} />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Header />
-            {renderPage()}
-          </div>
+        )}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Header />
+          {renderPage()}
         </div>
-      </FinanceDataProvider>
+      </div>
     </>
   );
 }

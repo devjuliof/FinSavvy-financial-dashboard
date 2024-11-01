@@ -1,0 +1,304 @@
+{
+  "userData": [
+    {
+      "month": "jan",
+      "userAccountData": {
+        "totalBalance": 5000,
+        "earnings": 2000,
+        "spendings": 1500,
+        "savings": 500
+      },
+      "userTransactions": [
+        {
+          "name": "Grocery",
+          "date": "5 Jan 2024",
+          "hour": "14:30",
+          "amount": 50.0,
+          "type": "expense"
+        },
+        {
+          "name": "Salary",
+          "date": "1 Jan 2024",
+          "hour": "09:00",
+          "amount": 2000.0,
+          "type": "income"
+        }
+      ]
+    },
+    {
+      "month": "feb",
+      "userAccountData": {
+        "totalBalance": 6200,
+        "earnings": 2500,
+        "spendings": 1300,
+        "savings": 600
+      },
+      "userTransactions": [
+        {
+          "name": "Transport",
+          "date": "10 Feb 2024",
+          "hour": "08:00",
+          "amount": 100.0,
+          "type": "expense"
+        },
+        {
+          "name": "Salary",
+          "date": "1 Feb 2024",
+          "hour": "09:00",
+          "amount": 2500.0,
+          "type": "income"
+        }
+      ]
+    },
+    {
+      "month": "mar",
+      "userAccountData": {
+        "totalBalance": 6500,
+        "earnings": 3000,
+        "spendings": 1200,
+        "savings": 700
+      },
+      "userTransactions": [
+        {
+          "name": "Rent",
+          "date": "5 Mar 2024",
+          "hour": "15:00",
+          "amount": 800.0,
+          "type": "expense"
+        },
+        {
+          "name": "Salary",
+          "date": "1 Mar 2024",
+          "hour": "09:00",
+          "amount": 3000.0,
+          "type": "income"
+        }
+      ]
+    },
+    {
+      "month": "apr",
+      "userAccountData": {
+        "totalBalance": 7000,
+        "earnings": 2800,
+        "spendings": 1100,
+        "savings": 800
+      },
+      "userTransactions": [
+        {
+          "name": "Utilities",
+          "date": "15 Apr 2024",
+          "hour": "10:00",
+          "amount": 200.0,
+          "type": "expense"
+        },
+        {
+          "name": "Salary",
+          "date": "1 Apr 2024",
+          "hour": "09:00",
+          "amount": 2800.0,
+          "type": "income"
+        }
+      ]
+    },
+    {
+      "month": "may",
+      "userAccountData": {
+        "totalBalance": 7500,
+        "earnings": 3200,
+        "spendings": 1400,
+        "savings": 900
+      },
+      "userTransactions": [
+        {
+          "name": "Shopping",
+          "date": "10 May 2024",
+          "hour": "15:00",
+          "amount": 400.0,
+          "type": "expense"
+        },
+        {
+          "name": "Salary",
+          "date": "1 May 2024",
+          "hour": "09:00",
+          "amount": 3200.0,
+          "type": "income"
+        }
+      ]
+    },
+    {
+      "month": "jun",
+      "userAccountData": {
+        "totalBalance": 8000,
+        "earnings": 3000,
+        "spendings": 1500,
+        "savings": 1000
+      },
+      "userTransactions": [
+        {
+          "name": "Dining Out",
+          "date": "20 Jun 2024",
+          "hour": "19:00",
+          "amount": 100.0,
+          "type": "expense"
+        },
+        {
+          "name": "Salary",
+          "date": "1 Jun 2024",
+          "hour": "09:00",
+          "amount": 3000.0,
+          "type": "income"
+        }
+      ]
+    },
+    {
+      "month": "jul",
+      "userAccountData": {
+        "totalBalance": 8500,
+        "earnings": 2900,
+        "spendings": 1200,
+        "savings": 1100
+      },
+      "userTransactions": [
+        {
+          "name": "Internet Bill",
+          "date": "10 Jul 2024",
+          "hour": "08:00",
+          "amount": 70.0,
+          "type": "expense"
+        },
+        {
+          "name": "Salary",
+          "date": "1 Jul 2024",
+          "hour": "09:00",
+          "amount": 2900.0,
+          "type": "income"
+        }
+      ]
+    },
+    {
+      "month": "aug",
+      "userAccountData": {
+        "totalBalance": 9000,
+        "earnings": 3100,
+        "spendings": 1300,
+        "savings": 1200
+      },
+      "userTransactions": [
+        {
+          "name": "Fuel",
+          "date": "15 Aug 2024",
+          "hour": "10:00",
+          "amount": 150.0,
+          "type": "expense"
+        },
+        {
+          "name": "Salary",
+          "date": "1 Aug 2024",
+          "hour": "09:00",
+          "amount": 3100.0,
+          "type": "income"
+        }
+      ]
+    },
+    {
+      "month": "sep",
+      "userAccountData": {
+        "totalBalance": 9500,
+        "earnings": 3400,
+        "spendings": 1100,
+        "savings": 1300
+      },
+      "userTransactions": [
+        {
+          "name": "Entertainment",
+          "date": "20 Sep 2024",
+          "hour": "19:00",
+          "amount": 200.0,
+          "type": "expense"
+        },
+        {
+          "name": "Salary",
+          "date": "1 Sep 2024",
+          "hour": "09:00",
+          "amount": 3400.0,
+          "type": "income"
+        }
+      ]
+    },
+    {
+      "month": "oct",
+      "userAccountData": {
+        "totalBalance": 10000,
+        "earnings": 3600,
+        "spendings": 1500,
+        "savings": 1400
+      },
+      "userTransactions": [
+        {
+          "name": "Car Maintenance",
+          "date": "15 Oct 2024",
+          "hour": "10:00",
+          "amount": 300.0,
+          "type": "expense"
+        },
+        {
+          "name": "Salary",
+          "date": "1 Oct 2024",
+          "hour": "09:00",
+          "amount": 3600.0,
+          "type": "income"
+        }
+      ]
+    },
+    {
+      "month": "nov",
+      "userAccountData": {
+        "totalBalance": 10500,
+        "earnings": 3700,
+        "spendings": 1600,
+        "savings": 1500
+      },
+      "userTransactions": [
+        {
+          "name": "Gifts",
+          "date": "25 Nov 2024",
+          "hour": "18:00",
+          "amount": 400.0,
+          "type": "expense"
+        },
+        {
+          "name": "Salary",
+          "date": "1 Nov 2024",
+          "hour": "09:00",
+          "amount": 3700.0,
+          "type": "income"
+        }
+      ]
+    },
+    {
+      "month": "dec",
+      "userAccountData": {
+        "totalBalance": 11000,
+        "earnings": 4000,
+        "spendings": 1700,
+        "savings": 1600
+      },
+      "userTransactions": [
+        {
+          "name": "Holiday Expenses",
+          "date": "20 Dec 2024",
+          "hour": "16:00",
+          "amount": 500.0,
+          "type": "expense"
+        },
+        {
+          "name": "Salary",
+          "date": "1 Dec 2024",
+          "hour": "09:00",
+          "amount": 4000.0,
+          "type": "income"
+        }
+      ]
+    }
+  ]
+}
