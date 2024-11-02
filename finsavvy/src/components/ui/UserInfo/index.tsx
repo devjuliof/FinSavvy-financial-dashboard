@@ -1,14 +1,20 @@
 import Image from "next/image";
 import styles from "./index.module.css";
-import logo from "@/../public/logo.png";
 
-export default function UserInfo() {
+interface HeaderProps {
+  image: string;
+  name: string;
+  email: string;
+}
+
+export default function UserInfo({ image, name, email }: HeaderProps) {
   return (
     <aside className={styles.userInfo}>
-      <Image src={logo} width={48} height={48} alt="User Icon" />
+      {image && <Image src={image} width={48} height={48} alt="User Icon" />}
+
       <div className={styles.info}>
-        <h4>Julio Cesar</h4>
-        <p>juliofariadev@gmail.com</p>
+        <h3>{name}</h3>
+        <p>{email}</p>
       </div>
     </aside>
   );

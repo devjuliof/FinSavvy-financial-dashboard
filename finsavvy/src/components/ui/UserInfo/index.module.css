@@ -1,6 +1,15 @@
 .userInfo {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.userInfo h3 {
+  font-size: 20px;
+}
+
+.userInfo img {
+  border-radius: 50px;
 }
 
 @media screen and (max-width: 600px) {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { font_inter, font_nunito } from "./fonts";
+import ProviderWrapper from "@/components/ProviderWrapper";
 
 export const metadata: Metadata = {
   title: "FinSavvy | Login",
@@ -16,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${font_inter.variable} ${font_nunito.variable}`}>
-        {children}
+        <ProviderWrapper>{children}</ProviderWrapper>
       </body>
     </html>
   );

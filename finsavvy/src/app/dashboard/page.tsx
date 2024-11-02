@@ -7,10 +7,23 @@ import Overview from "@/components/Overview";
 import MySavings from "@/components/MySavings";
 import { isMobileOrTablet } from "../../../utils/isMobileOrTablet";
 import MenuMobile from "@/components/MenuMobile";
+import { useSession } from "next-auth/react";
 
 type Page = "overview" | "mySavings";
 
+interface SessionUser {
+  image: string;
+  name: string;
+  email: string;
+}
+
+interface Session {
+  user: SessionUser;
+}
+
 export default function Dashboard() {
+  const { data: session } = useSession() as { data: Session };
+
   const [currentPage, setCurrentPage] = React.useState<Page>("overview");
   const [isMobile, setIsMobile] = React.useState<boolean>(isMobileOrTablet());
 
@@ -54,7 +67,11 @@ export default function Dashboard() {
             flexDirection: "column",
           }}
         >
-          <Header />
+          <Header
+            image={session?.user.image}
+            name={session?.user.name}
+            email={session?.user.email}
+          />
           {renderPage()}
         </div>
       </div>
