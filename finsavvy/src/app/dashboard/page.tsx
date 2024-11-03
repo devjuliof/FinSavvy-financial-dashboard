@@ -25,12 +25,14 @@ export default function Dashboard() {
   const { data: session } = useSession() as { data: Session };
 
   const [currentPage, setCurrentPage] = React.useState<Page>("overview");
-  const [isMobile, setIsMobile] = React.useState<boolean>(isMobileOrTablet());
+  const [isMobile, setIsMobile] = React.useState<boolean>(false);
 
   React.useEffect(() => {
     const handleResize = () => {
       setIsMobile(isMobileOrTablet());
     };
+
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 
@@ -51,30 +53,20 @@ export default function Dashboard() {
   };
 
   return (
-    <>
-      <div style={{ display: "flex" }}>
-        {isMobile ? (
-          <MenuMobile
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-          />
-        ) : (
-          <Menu currentPage={currentPage} setCurrentPage={setCurrentPage} />
-        )}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <Header
-            image={session?.user.image}
-            name={session?.user.name}
-            email={session?.user.email}
-          />
-          {renderPage()}
-        </div>
+    <div style={{ display: "flex" }}>
+      {isMobile ? (
+        <MenuMobile currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      ) : (
+        <Menu currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      )}
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <Header
+          image={session?.user.image}
+          name={session?.user.name}
+          email={session?.user.email}
+        />
+        {renderPage()}
       </div>
-    </>
+    </div>
   );
 }

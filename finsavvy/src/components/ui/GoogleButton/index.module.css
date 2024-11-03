@@ -14,5 +14,10 @@
 }
 
 .button:hover {
+  border-color: #495057; /* tom mais escuro */
   transform: scale(0.95);
+}
+
+.button:active {
+  transform: scale(0.8);
 }

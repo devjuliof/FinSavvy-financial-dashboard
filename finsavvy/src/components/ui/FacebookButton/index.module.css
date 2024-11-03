@@ -10,9 +10,14 @@
   cursor: pointer;
   font-size: 14px;
   gap: 10px;
-  transition: transform 0.2s; /* Transição suave para o tamanho */
+  transition: transform 0.2s;
 }
 
 .button:hover {
-  transform: scale(0.95); /* Reduz ligeiramente o botão ao passar o mouse */
+  border-color: #495057;
+  transform: scale(0.95);
+}
+
+.button:active {
+  transform: scale(0.8);
 }
