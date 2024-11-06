@@ -1,5 +1,11 @@
+"use client";
+
 import { useState } from "react";
 import styles from "./index.module.css";
+import SaveButton from "../ui/SaveButton";
+import AddButton from "../ui/AddButton";
+import SendButton from "../ui/SendButton";
+import TakeoutButton from "../ui/TakeoutButton";
 
 interface UserTransaction {
   name: string;
@@ -11,15 +17,23 @@ interface UserTransaction {
 
 interface ModalFormProps {
   onClose: () => void;
+  transactionType:
+    | "expense"
+    | "income"
+    | "savings-increase"
+    | "savings-decrease";
 }
 
-export default function ModalForm({ onClose }: ModalFormProps) {
+export default function ModalForm({
+  onClose,
+  transactionType,
+}: ModalFormProps) {
   const [formData, setFormData] = useState<UserTransaction>({
     name: "",
     date: "",
     hour: "",
     amount: 0,
-    type: "expense",
+    type: transactionType,
   });
 
   const handleChange = (
@@ -34,13 +48,20 @@ export default function ModalForm({ onClose }: ModalFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log(formData); // Send data to Backend
     onClose();
   };
 
   return (
     <div className={styles.modalBackdrop}>
       <div className={styles.modalContent}>
-        <h2>Add Transaction</h2>
+        <button className={styles.closeBtn} type="button" onClick={onClose}>
+          x
+        </button>
+        {transactionType === "income" && <h2>Add Transaction</h2>}
+        {transactionType === "expense" && <h2>Send Money</h2>}
+        {transactionType === "savings-increase" && <h2>Save Money</h2>}
+        {transactionType === "savings-decrease" && <h2>Take from Savings</h2>}
         <form onSubmit={handleSubmit}>
           <label>
             Name:
@@ -52,49 +73,52 @@ export default function ModalForm({ onClose }: ModalFormProps) {
               required
             />
           </label>
-          <label>
-            Date:
-            <input
-              type="date"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <label>
-            Hour:
-            <input
-              type="time"
-              name="hour"
-              value={formData.hour}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <label>
-            Amount:
-            <input
-              type="number"
-              name="amount"
-              value={formData.amount}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <label>
-            Type:
-            <select name="type" value={formData.type} onChange={handleChange}>
-              <option value="expense">Expense</option>
-              <option value="income">Income</option>
-              <option value="savings-increase">Savings Increase</option>
-              <option value="savings-decrease">Savings Decrease</option>
-            </select>
-          </label>
-          <button type="submit">Save</button>
-          <button type="button" onClick={onClose}>
-            Cancel
-          </button>
+          <div className={styles.wrap}>
+            <label className={styles.column}>
+              Date:
+              <input
+                type="date"
+                name="date"
+                value={formData.date}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label className={styles.column}>
+              Hour:
+              <input
+                type="time"
+                name="hour"
+                value={formData.hour}
+                onChange={handleChange}
+                required
+              />
+            </label>
+          </div>
+          <div className={styles.wrap}>
+            <label className={styles.column}>
+              Amount:
+              <input
+                type="number"
+                name="amount"
+                value={formData.amount}
+                onChange={handleChange}
+                required
+              />
+            </label>
+          </div>
+          <div className={styles.submitBtn}>
+            {transactionType === "income" ||
+              (transactionType === "savings-increase" && (
+                <AddButton onClick={(e) => handleSubmit(e)} />
+              ))}
+            {transactionType === "expense" && (
+              <SendButton onClick={(e) => handleSubmit(e)} />
+            )}
+            {transactionType === "savings-decrease" && (
+              <TakeoutButton onClick={(e) => handleSubmit(e)} />
+            )}
+          </div>
         </form>
       </div>
     </div>

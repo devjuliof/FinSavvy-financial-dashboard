@@ -1,0 +1,41 @@
+.section {
+  background-color: #f6f6f8;
+  height: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 340px));
+  gap: 35px;
+  align-items: center;
+}
+
+.addBtn {
+  margin: 200px 150px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e9ecef;
+  color: #495057;
+  font-size: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.addBtn:hover {
+  background-color: #3b82f6;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.addBtn:focus {
+  outline: none;
+}

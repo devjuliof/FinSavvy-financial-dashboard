@@ -12,6 +12,9 @@ interface TotalBalanceCardProps {
 
 export default function TotalBalanceCard({ balance }: TotalBalanceCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [transactionType, setTransactionType] = useState<"expense" | "income">(
+    "income"
+  );
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -24,11 +27,23 @@ export default function TotalBalanceCard({ balance }: TotalBalanceCardProps) {
       </header>
       <h3>${balance}</h3>
       <div className={styles.buttons}>
-        <AddButton onClick={openModal} />
-        <SendButton />
+        <AddButton
+          onClick={() => {
+            openModal();
+            setTransactionType("income");
+          }}
+        />
+        <SendButton
+          onClick={() => {
+            openModal();
+            setTransactionType("expense");
+          }}
+        />
       </div>
 
-      {isModalOpen && <ModalForm onClose={closeModal} />}
+      {isModalOpen && (
+        <ModalForm onClose={closeModal} transactionType={transactionType} />
+      )}
     </article>
   );
 }
