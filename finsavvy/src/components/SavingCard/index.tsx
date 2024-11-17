@@ -7,13 +7,12 @@ import TakeoutButton from "../ui/TakeoutButton";
 import { useState } from "react";
 import ModalForm from "../ModalForm";
 
-// Tipando as props
 interface SavingCardProps {
   name: string;
   image: File | null;
   targetAmount: number;
-  currentAmount: number;
-  onDelete: () => void; // Função de exclusão
+  currentAmount?: number;
+  onDelete: () => void;
 }
 
 export default function SavingCard({
