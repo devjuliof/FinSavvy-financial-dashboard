@@ -6,6 +6,12 @@
   padding-top: 20px;
 }
 
+.tittle {
+  color: #0e3145;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, 340px));

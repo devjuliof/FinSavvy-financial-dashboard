@@ -5,7 +5,10 @@ interface ProgressBarProps {
   goal: number;
 }
 
-const ProgressBar: React.FC<ProgressBarProps> = ({ currentAmount, goal }) => {
+const ProgressBar: React.FC<ProgressBarProps> = ({
+  currentAmount = 0,
+  goal,
+}) => {
   const progress = (currentAmount / goal) * 100;
 
   return (

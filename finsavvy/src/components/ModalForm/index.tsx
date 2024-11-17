@@ -108,15 +108,17 @@ export default function ModalForm({
             </label>
           </div>
           <div className={styles.submitBtn}>
-            {transactionType === "income" ||
-              (transactionType === "savings-increase" && (
-                <AddButton onClick={(e) => handleSubmit(e)} />
-              ))}
+            {transactionType === "income" && (
+              <AddButton onClick={(e) => handleSubmit(e)} />
+            )}
             {transactionType === "expense" && (
               <SendButton onClick={(e) => handleSubmit(e)} />
             )}
             {transactionType === "savings-decrease" && (
               <TakeoutButton onClick={(e) => handleSubmit(e)} />
+            )}
+            {transactionType === "savings-increase" && (
+              <AddButton onClick={(e) => handleSubmit(e)} />
             )}
           </div>
         </form>

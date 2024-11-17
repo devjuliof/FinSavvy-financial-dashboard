@@ -31,7 +31,7 @@ export default function MySavings() {
   return (
     <>
       <section className={styles.section}>
-        <h2>MySavings</h2>
+        <h1 className={styles.tittle}>MySavings</h1>
         <div className={styles.row}>
           <div className={styles.cards}>
             {savingCards.map((goal, index) => (

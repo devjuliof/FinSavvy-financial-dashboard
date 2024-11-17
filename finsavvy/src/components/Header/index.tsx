@@ -14,8 +14,6 @@ export default function Header({ image, name, email }: HeaderProps) {
     <header className={styles.header}>
       <h2>Dashboard</h2>
       <div className={styles.rightContainer}>
-        <NotificationButton />
-        <VerticalLine />
         <UserInfo image={image} name={name} email={email} />
       </div>
     </header>
