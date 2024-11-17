@@ -9,7 +9,7 @@ interface SavingGoal {
   name: string;
   image: File | null;
   targetAmount: number;
-  currentAmount: number;
+  currentAmount?: number;
 }
 
 export default function MySavings() {
