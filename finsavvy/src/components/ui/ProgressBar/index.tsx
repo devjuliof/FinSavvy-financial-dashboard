@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ProgressBarProps {
-  currentAmount: number;
+  currentAmount?: number;
   goal: number;
 }
 
